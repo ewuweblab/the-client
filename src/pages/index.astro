@@ -1,17 +1,57 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PersonCard from '../components/PersonCard.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>The Client</title>
-	</head>
-	<body>
-		<h1>The Client</h1>
-	</body>
-</html>
+<BaseLayout title="Web Pioneers">
+	<div class="max-w-5xl mx-auto p-6">
+		<h1 class="text-4xl font-bold mb-8">Web Pioneers</h1>
+
+		<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+			<PersonCard
+				name="Tim Berners-Lee"
+				image="/images/tim-berners-lee.jpg"
+				link="https://www.w3.org/People/Berners-Lee/"
+				linkText="w3.org/People/Berners-Lee"
+			>
+				Invented the World Wide Web at CERN in 1989, creating HTML, URLs and HTTP. Founded the W3C in 1994 and co-founded the Open Data Institute.
+			</PersonCard>
+
+			<PersonCard
+				name="Jeffrey Zeldman"
+				image="/images/jeffrey-zeldman.jpg"
+				link="https://zeldman.com/"
+				linkText="zeldman.com"
+			>
+				Co-founded A List Apart and led the Web Standards Project. Wrote <em>Designing with Web Standards</em> and co-founded the An Event Apart conference.
+			</PersonCard>
+
+			<PersonCard
+				name="Nicole Sullivan"
+				image="/images/nicole-sullivan.jpg"
+				link="https://www.stubbornella.org/"
+				linkText="stubbornella.org"
+			>
+				Created Object-Oriented CSS (OOCSS) for scalable, reusable stylesheets. Known for front-end performance work at Yahoo! and Facebook.
+			</PersonCard>
+
+			<PersonCard
+				name="Molly Holzschlag"
+				image="/images/molly-holzschlag.jpg"
+				link="https://www.molly.com/"
+				linkText="molly.com"
+			>
+				Author of 35 books on web design, including <em>The Zen of CSS Design</em>. Led the Web Standards Project (2004–2006) and championed accessibility and education. (1963–2023)
+			</PersonCard>
+
+			<PersonCard
+				name="Eric Meyer"
+				image="/images/eric-meyer.jpg"
+				link="https://meyerweb.com/"
+				linkText="meyerweb.com"
+			>
+				Early CSS champion and author of <em>CSS: The Definitive Guide</em>. Co-founded An Event Apart and created the S5 slideshow format.
+			</PersonCard>
+		</div>
+	</div>
+</BaseLayout>
