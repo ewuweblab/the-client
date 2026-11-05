@@ -1,1 +1,4 @@
 @import "tailwindcss";
+
+/* Keystatic's config isn't markup; keep words like "table" from becoming CSS. */
+@source not "../../keystatic.config.ts";
